@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Form</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="title">Survey Form</h1>
+        <p id="description">Please fill out this survey form.</p>
+        <form id="survey-form">
+            <label id="name-label" for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label id="email-label" for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label id="number-label" for="number">Age<span class="clue">(optional)</span></label>
+            <input type="number" name="age" id="number" min="10" max="99" class="form-control" placeholder="Age"/>
+
+            <p>What is your level of knowledge about programming?</p>
+            <select class="form-control" id="dropdown" name="role" required>
+                <option disabled selected value>Select language</option>
+                <option value="beginner">Beginner</option>
+                <option value="intermediary">Intermediary</option>
+                <option value="professional">Professional</option>
+                <option value="advanced">Advanced</option>
+                <option value="master">Master</option>
+            </select>
+
+            <fieldset>
+                <legend>What type of programmer are you:</legend>
+                <div class="radio-container">
+                    <input type="radio" id="option1" name="radio-group" value="option1">
+                    <label for="option1">BackEnd</label>
+                    <input type="radio" id="option2" name="radio-group" value="option2">
+                    <label for="option2">FrontEnd</label>
+                    <input type="radio" id="option3" name="radio-group" value="option3">
+                    <label for="option3">FullStack</label>
+                </div>
+            </fieldset>
+            <p>
+                What programming language you are familiar with?
+                <span class="clue">(Check all that apply)</span>
+            </p>
+
+            <label
+            ><input name="prefer" value="python" type="checkbox" class="input-checkbox"/>Python</label>
+
+            <label><input name="prefer" value="c" type="checkbox" class="input-checkbox"/>C</label>
+
+            <label><input name="prefer" value="c++" type="checkbox" class="input-checkbox"/>C++</label>
+
+            <label><input name="prefer" value="c#" type="checkbox" class="input-checkbox"/>C#</label>
+
+            <label><input name="prefer" value="Java" type="checkbox" class="input-checkbox"/>Java</label>
+
+            <label><input name="prefer" value="javascript" type="checkbox" class="input-checkbox"/>Javascript</label>
+
+            <label><input name="prefer" value="rust" type="checkbox" class="input-checkbox"/>Rust</label>
+
+            <label><input name="prefer" value="ruby" type="checkbox" class="input-checkbox"/>Ruby</label>
+
+            <div class="form-group">
+                <p>Any suggestions?</p>
+                <textarea id="coments" class="input-textarea" name="comment" placeholder="Enter your comment here..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" id="submit" class="submit-button">Submit</button>
+            </div>
+
+        </form>
+    </div>
+</body>
+</html>
